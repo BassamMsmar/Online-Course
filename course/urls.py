@@ -1,6 +1,7 @@
 from django.urls import path
-from .api import couser_list_api
+from .api import CousrseListAPI, CousrseDetailAPI
 
 urlpatterns = [
-    path('api', couser_list_api),
+    path('api', CousrseListAPI.as_view()),
+    path('api/<int:pk>', CousrseDetailAPI.as_view()),
 ]
