@@ -7,7 +7,7 @@ class Course(models.Model):
     description = models.TextField(max_length=400)
     price = models.IntegerField()
     category = models.CharField(max_length=50)
-    reviews = models.IntegerField(default=0)
+    reviews = models.TextField(max_length=400)
 
     def __str__(self):
         return self.name
