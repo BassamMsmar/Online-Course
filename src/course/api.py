@@ -5,11 +5,11 @@ from .serializers import CourseSerializer
 from .models import Course
 
 
-class CousrseListAPI(generics.ListAPIView):
+class CousrseListAPI(generics.ListCreateAPIView):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
 
 
-class CousrseDetailAPI(generics.RetrieveAPIView):
+class CousrseDetailAPI(generics.RetrieveUpdateDestroyAPIView):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
